@@ -30,7 +30,7 @@ import com.google.common.collect.Range;
 @Parameters(separators = "=")
 public class AgentOptions {
 
-    private static final String DEFAULT_CONFIG_FILE = "/etc/aws-kinesis/agent.json";
+    private static final String DEFAULT_CONFIG_FILE = "configuration\\release\\aws-kinesis-agent.json";
     private static final String[] VALID_LOG_LEVELS = { "TRACE", "DEBUG", "INFO", "WARN", "ERROR" };
 
     @Parameter(names = { "--configuration", "-c" }, description = "Path to the configuration file for the agent.", validateWith = FileReadableValidator.class)

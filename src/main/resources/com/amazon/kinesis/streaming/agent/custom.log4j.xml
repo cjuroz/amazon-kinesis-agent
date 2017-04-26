@@ -5,7 +5,7 @@
             <root-ref />
             <appender-ref ref="FALLBACK" />
         </errorHandler>
-        <param name="File" value="/var/log/aws-kinesis-agent/aws-kinesis-agent.log" />
+        <param name="File" value="aws-kinesis-agent.log" />
         <param name="Encoding" value="UTF-8" />
         <param name="MaxBackupIndex" value="5" />
         <param name="MaxFileSize" value="10485760" />
@@ -15,7 +15,7 @@
         </layout>
     </appender>
     <appender name="FALLBACK" class="org.apache.log4j.RollingFileAppender">
-        <param name="File" value="/tmp/fallback-aws-kinesis-agent.log" />
+        <param name="File" value="fallback-aws-kinesis-agent.log" />
         <param name="Encoding" value="UTF-8" />
         <param name="MaxBackupIndex" value="2" />
         <param name="MaxFileSize" value="2097152" />

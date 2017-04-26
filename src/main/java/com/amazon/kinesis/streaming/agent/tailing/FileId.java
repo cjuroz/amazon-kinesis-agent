@@ -43,7 +43,7 @@ public class FileId {
                         + file);
         BasicFileAttributes attr = Files.readAttributes(file,
                 BasicFileAttributes.class);
-        return get(attr);
+        return get(file.toString());
     }
 
     /**
@@ -55,8 +55,8 @@ public class FileId {
      * @return
      * @throws IOException
      */
-    public static FileId get(BasicFileAttributes attr) throws IOException {
-        return new FileId(attr.fileKey().toString());
+    public static FileId get(String s) throws IOException {
+        return new FileId(WindowsFileHandle.fileKey(s));
     }
 
     public FileId(String id) {

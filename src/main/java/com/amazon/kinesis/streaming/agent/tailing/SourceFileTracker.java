@@ -250,7 +250,7 @@ public class SourceFileTracker {
                 }
                 BasicFileAttributes newAttr = Files.readAttributes(currentOpenFile.getPath(), BasicFileAttributes.class);
                 // Check if the file ID changed
-                FileId newId = FileId.get(newAttr);
+                FileId newId = FileId.get(currentOpenFile.path);
                 if(!newId.equals(currentOpenFile.getId())) {
                     LOGGER.debug("ID for current file ({}) changed from {} to {}. Must refresh.", currentOpenFile.getPath(), currentOpenFile.getId(), newId);
                     return true;

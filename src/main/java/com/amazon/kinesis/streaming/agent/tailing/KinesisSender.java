@@ -27,7 +27,6 @@ import com.amazon.kinesis.streaming.agent.metrics.IMetricsScope;
 import com.amazon.kinesis.streaming.agent.metrics.Metrics;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.services.cloudwatch.model.StandardUnit;
-import com.amazonaws.services.kinesis.model.ProvisionedThroughputExceededException;
 import com.amazonaws.services.kinesis.model.PutRecordsRequest;
 import com.amazonaws.services.kinesis.model.PutRecordsRequestEntry;
 import com.amazonaws.services.kinesis.model.PutRecordsResult;

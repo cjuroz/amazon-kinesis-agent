@@ -42,8 +42,8 @@ public class SourceFile {
     public SourceFile(FileFlow<?> flow, String filePattern) {
         this.flow = flow;
         // fileName
-        Preconditions.checkArgument(!filePattern.endsWith("/"), "File name component is empty!");
-        Path filePath = FileSystems.getDefault().getPath(filePattern);
+        Preconditions.checkArgument(!filePattern.endsWith("\\"), "File name component is empty!");
+        Path filePath = FileSystems.getDefault().getPath(filePattern.replaceFirst("\\*$", ""));
         // TODO: this does not handle globs in directory component: e.g. /opt/*/logs/app.log, /opt/**/app.log*
         this.directory = filePath.getParent();
         validateDirectory(this.directory);
@@ -103,7 +103,7 @@ public class SourceFile {
 
     @Override
     public String toString() {
-        return this.directory + "/" + this.filePattern;
+        return this.directory + "\\" + this.filePattern;
     }
 
     /**
