@@ -100,7 +100,7 @@ By default, the Amazon Kinesis Agent reads the configuration file from /etc/aws-
 To start the program, use the following command:
 
 ```sh
-java -cp CLASSPATH "Agent"
+java -cp CLASSPATH "com.amazon.kinesis.streaming.agent.Agent"
 ```
 
 **CLASSPATH** is the classpath to your dependencies and the target JAR file that you built from the step above.

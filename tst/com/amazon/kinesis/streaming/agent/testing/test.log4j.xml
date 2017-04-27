@@ -56,11 +56,11 @@
         <level value="DEBUG" />
     </logger>
 
-    <logger name="AsyncPublisher">
+    <logger name="com.amazon.kinesis.streaming.agent.tailing.AsyncPublisher">
         <level value="DEBUG" />
     </logger>
 
-    <logger name="SimplePublisher">
+    <logger name="com.amazon.kinesis.streaming.agent.tailing.SimplePublisher">
         <level value="DEBUG" />
     </logger>
 
